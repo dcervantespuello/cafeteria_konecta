@@ -15,7 +15,7 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Reportes</a></li>
+                <li><a class="dropdown-item" href="https://github.com/dcervantespuello/cafeteria_konecta">GitHub</a></li>
             </ul>
         </li>
     </ul>
