@@ -2,8 +2,8 @@
 
 $connection = mysqli_connect("localhost", "root", "", "cafe_db");
 
-if ($connection) {
+if (!$connection) {
     echo 'Conectado correctamente a la base de datos';
-} else {
-    echo 'No se a podido conectar correctamente';
 }
+
+mysqli_set_charset($connection, 'utf8');

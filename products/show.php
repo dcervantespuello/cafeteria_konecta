@@ -1,3 +1,8 @@
+<?php
+include('db_connection.php');
+$query = "SELECT * FROM products";
+?>
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -24,16 +29,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>Limón</td>
-            <td>LI001</td>
-            <td>500</td>
-            <td>100</td>
-            <td>Alimentos</td>
-            <td>5</td>
-            <td><button class="btn btn-primary">Editar</button></td>
-            <td><button class="btn btn-danger">Eliminar</button></td>
-        </tr>
+        <?php $products = mysqli_query($connection, $query);
+        while ($row = mysqli_fetch_assoc($products)) { ?>
+            <tr>
+                <td><?php echo $row["id"]; ?></td>
+                <td><?php echo $row["name"]; ?></td>
+                <td><?php echo $row["reference"]; ?></td>
+                <td><?php echo $row["price"]; ?></td>
+                <td><?php echo $row["weight"]; ?></td>
+                <td><?php echo $row["category"]; ?></td>
+                <td><?php echo $row["stock"]; ?></td>
+                <td><button class="btn btn-primary">Editar</button></td>
+                <td><button class="btn btn-danger">Eliminar</button></td>
+            </tr>
+        <?php } ?>
     </tbody>
 </table>
