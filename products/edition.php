@@ -1,7 +1,7 @@
 <?php
 include('db_connection.php');
-$product_id = $_GET['id'];
-$query = "SELECT * FROM products WHERE id =" . $product_id;
+$id = $_GET['id'];
+$query = "SELECT * FROM products WHERE id =" . $id;
 ?>
 
 <div class="container mb-4">
@@ -19,7 +19,7 @@ $product = mysqli_fetch_assoc($execute);
 
 <form action="/products/update.php" method="POST">
 
-    <input type="hidden" name="id" value="<?= $product_id ?>">
+    <input type="hidden" name="id" value="<?= $id ?>">
 
     <div class="row">
         <div class="col">
