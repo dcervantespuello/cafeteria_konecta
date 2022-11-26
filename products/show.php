@@ -9,7 +9,9 @@ $query = "SELECT * FROM products";
             <h1>Productos</h1>
         </div>
         <div class="col-2">
-            <button type="button" class="btn btn-success btn-lg" style="margin-left: 13px;">Nuevo producto</button>
+            <a href="?menu=nuevo-producto">
+                <button type="button" class="btn btn-success btn-lg" style="margin-left: 13px;">Nuevo producto</button>
+            </a>
         </div>
     </div>
 </div>
@@ -42,6 +44,8 @@ $query = "SELECT * FROM products";
                 <td><button class="btn btn-primary">Editar</button></td>
                 <td><button class="btn btn-danger">Eliminar</button></td>
             </tr>
-        <?php } ?>
+        <?php }
+        mysqli_free_result($products);
+        mysqli_close($connection); ?>
     </tbody>
 </table>

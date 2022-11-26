@@ -1,48 +1,63 @@
-<form>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3">
-        <label for="exampleSelect" class="form-label">Select menu</label>
-        <select class="form-select" id="exampleSelect">
-            <option selected="">Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <fieldset class="mb-3">
-        <legend>Radios buttons</legend>
-        <div class="form-check">
-            <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
-            <label class="form-check-label" for="exampleRadio1">Default radio</label>
+<div class="container mb-4">
+    <div class="row">
+        <div class="col">
+            <h1>Nuevo Producto</h1>
         </div>
-        <div class="mb-3 form-check">
-            <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
-            <label class="form-check-label" for="exampleRadio2">Another radio</label>
+    </div>
+</div>
+
+<form action="/products/store.php" method="POST">
+    <div class="row">
+        <div class="col">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required />
+            </div>
         </div>
-    </fieldset>
-    <div class="mb-3">
-        <label class="form-label" for="customFile">Upload</label>
-        <input type="file" class="form-control" id="customFile">
+        <div class="col">
+            <div class="mb-3">
+                <label for="reference" class="form-label">Referencia</label>
+                <input type="text" class="form-control" id="reference" name="reference" placeholder="Referencia" required />
+            </div>
+        </div>
     </div>
-    <div class="mb-3 form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked="">
-        <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+    <div class="row">
+        <div class="col">
+            <div class="mb-3">
+                <label for="price" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="price" name="price" placeholder="Precio" required />
+            </div>
+        </div>
+        <div class="col">
+            <div class="mb-3">
+                <label for="weight" class="form-label">Peso</label>
+                <input type="number" class="form-control" id="weight" name="weight" placeholder="Peso" required />
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="customRange3" class="form-label">Example range</label>
-        <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+    <div class="row">
+        <div class="col">
+            <div class="mb-3">
+                <label for="category" class="form-label">Categoría</label>
+                <select class="form-select" id="category" name="category" required>
+                    <option value="" selected>-- Seleccionar --</option>
+                    <option value="Comidas">Comidas</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Helados">Helados</option>
+                    <option value="Postres">Postres</option>
+                    <option value="Caramelos">Caramelos</option>
+                </select>
+            </div>
+        </div>
+        <div class="col">
+            <div class="mb-3">
+                <label for="stock" class="form-label">Stock</label>
+                <input type="number" class="form-control" id="stock" name="stock" placeholder="Stock" required />
+            </div>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-success">Guardar producto</button>
+    <a href="/">
+        <button type="button" class="btn btn-secondary">Atrás</button>
+    </a>
 </form>
