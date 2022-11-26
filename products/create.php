@@ -40,7 +40,6 @@
             <div class="mb-3">
                 <label for="category" class="form-label">Categoría</label>
                 <select class="form-select" id="category" name="category" required>
-                    <option value="" selected>-- Seleccionar --</option>
                     <option value="Comidas">Comidas</option>
                     <option value="Bebidas">Bebidas</option>
                     <option value="Helados">Helados</option>

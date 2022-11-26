@@ -41,8 +41,8 @@ $query = "SELECT * FROM products";
                 <td><?php echo $row["weight"]; ?></td>
                 <td><?php echo $row["category"]; ?></td>
                 <td><?php echo $row["stock"]; ?></td>
-                <td><button class="btn btn-primary">Editar</button></td>
-                <td><button class="btn btn-danger">Eliminar</button></td>
+                <td><a href="?menu=editar-producto&id=<?php echo $row["id"]; ?>"><button class="btn btn-primary">Editar</button></a></td>
+                <td><a href="?menu=eliminar-producto&id=<?php echo $row["id"]; ?>"><button class="btn btn-danger">Eliminar</button></a></td>
             </tr>
         <?php }
         mysqli_free_result($products);
