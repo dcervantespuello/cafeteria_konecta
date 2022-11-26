@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<table class="table table-hover mt-4 text-center">
+<table class="table table-hover mt-4 mb-5 text-center">
     <thead>
         <tr>
             <th>ID</th>

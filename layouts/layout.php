@@ -11,17 +11,6 @@
 
     <!-- Ícono de ventana-->
     <link rel="icon" href="/img/logo.png" type="image/png">
-
-    <!-- Inicio Estilos -->
-    <style>
-        footer {
-            position: fixed;
-            height: 100px;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    <!-- Fin Estilos -->
 </head>
 
 <body>
