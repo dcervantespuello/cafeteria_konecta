@@ -10,7 +10,7 @@ $query = "SELECT * FROM products";
         </div>
         <div class="col-2">
             <a href="?menu=nuevo-producto">
-                <button type="button" class="btn btn-success btn-lg" style="margin-left: 13px;">Nuevo producto</button>
+                <button type="button" class="btn btn-lg text-white" style="margin-left: 13px; background-color: #049790;">Nuevo producto</button>
             </a>
         </div>
     </div>
@@ -28,6 +28,7 @@ $query = "SELECT * FROM products";
             <th>Stock</th>
             <th>Editar</th>
             <th>Eliminar</th>
+            <th>Vender</th>
         </tr>
     </thead>
     <tbody>
@@ -43,6 +44,16 @@ $query = "SELECT * FROM products";
                 <td><?php echo $row["stock"]; ?></td>
                 <td><a href="?menu=editar-producto&id=<?php echo $row["id"]; ?>"><button class="btn btn-primary">Editar</button></a></td>
                 <td><a href="?menu=eliminar-producto&id=<?php echo $row["id"]; ?>"><button class="btn btn-danger">Eliminar</button></a></td>
+                <td>
+                    <form action="?menu=nueva-venta&id=<?php echo $row["id"]; ?>" method="POST" class="row row-cols-lg-auto g-3 align-items-center justify-content-center">
+                        <div class="col-6">
+                            <input type="number" class="form-control" id="sold" placeholder="Cantidad" name="sold">
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-success">Vender</button>
+                        </div>
+                    </form>
+                </td>
             </tr>
         <?php }
         mysqli_free_result($products);

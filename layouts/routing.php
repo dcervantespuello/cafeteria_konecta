@@ -15,6 +15,10 @@ if (!isset($_GET['menu'])) {
             require_once('products/delete.php');
             break;
 
+        case 'nueva-venta':
+            require_once('sales/create.php');
+            break;
+
         default:
             # code...
             break;
